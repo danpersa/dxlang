@@ -1,0 +1,28 @@
+module Standard
+
+  if: condition: Boolean then: Block else: Block is
+    condition is_true: then.call
+              else: else()
+  end
+
+  loop_through: [H | T] is
+    print H
+    loop_through: T
+  end
+
+  loop_through: [] is
+  end
+
+  # pattern matching by type
+  sum: a: Integer b: Integer is
+    a + b
+  end
+
+  sum: a: List b: List is
+    a ++ b
+  end
+
+  sum: a: String b: String when a.length > 10 and b.length < 10 is
+    a + b
+  end
+end

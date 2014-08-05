@@ -1,0 +1,32 @@
+interface Function
+  apply: param: is undefined
+end
+
+# implicit interfaces
+class ToStringTransformer
+  apply: param: is
+    return param.to_str
+  end
+end
+
+object some_other_transformer
+  apply: param: is
+    return param.to_str
+  end
+end
+
+object to_string_transformer < ToStringTransformer
+
+
+module Sample
+
+  main args: List is
+    result = to_string_transformer apply: 23
+    result should_be: "23"
+  end
+
+private
+  print: text: is
+    puts "some text #{text}"
+  end
+end

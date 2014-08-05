@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require './lib/dxlang/scanner'
+require './lib/dxlang/parser'
+
+puts '---- SCAN ----'
+tokens = Dxlang::Scanner.scan(STDIN.read)
+puts tokens.inspect
+
+puts '---- PARSE ----'
+ast = Dxlang::Parser.new.parse(tokens)
+puts ast.inspect

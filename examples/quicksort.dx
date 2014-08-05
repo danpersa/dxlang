@@ -1,0 +1,22 @@
+interface Sorter
+  List sort: list: List is undefined
+end
+
+
+class Quicksort
+  List sort: list: List is
+    qsort: list: list
+  end
+
+private
+
+  List qsort: [pivot | tail] is
+    f = func: x: is x < pivot
+    (smaller, rest) = tail partition: on: f
+    qsort(smaller) ++ pivot ++ qsort(rest)
+  end
+
+  List qsort: nil
+    nil
+  end
+end

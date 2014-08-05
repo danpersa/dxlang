@@ -1,0 +1,9 @@
+module Functions
+  def main: args: List is
+
+    f = func: a: b: is a + b
+
+    list = [1, 2, 3, 4, 5]
+    list map: to: f
+  end
+end

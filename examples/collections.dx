@@ -1,0 +1,22 @@
+module CollectionsExample
+  def example: is
+
+    # list
+    [1, 2, 4, 5]
+
+    # tuples
+    (1, 3, 5)
+
+    # tuple of lists
+    ([1], [23, 43], [31])
+    (1, 4, 6)[0] # -> 1
+
+    # hash
+    {name: 'he', job: 'developer'}
+
+    # ranges
+    [1..100]
+    [a..b]
+  end
+
+end

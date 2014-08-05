@@ -1,0 +1,38 @@
+class Point
+  final with_getter Integer x
+  final with_getter Integer y
+
+  Point default: x: Integer y: Integer is
+    return Point new: x: x y: y
+  end
+
+private
+  initialize: x: Integer y: Integer is
+    self.x = x
+    self.y = y
+  end
+end
+
+immutable class Point1 x: Integer y: Integer
+
+class Rectangle
+  final with_getter Point upper_left_corner
+  final_with_getter Point down_right_corner
+
+  default: a: Point b: Point is
+    return Rectangle new a b
+  end
+
+private 
+
+  initialize: a: Point b: Point is
+    upper_left_corner = a
+    down_right_corner = b
+  end
+end
+
+module Main
+  main: args: List is
+    Rectangle a: (Point x: 2 y: 3) b: (Point x: 4 y: 6)
+  end
+end

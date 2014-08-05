@@ -1,0 +1,6 @@
+class String
+
+  # string concatenation
+  +: second: String is self.append(second)
+
+end

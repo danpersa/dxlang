@@ -1,0 +1,20 @@
+class Boolean
+  is_true: then: Block else: Block is undefined
+
+  and: second: Boolean is
+    is_true: second else false
+  end
+
+end
+
+object True < Boolean
+  is_true: then: Block else: Block is
+    then()
+  end
+end
+
+object False < Boolean
+  is_true: then: Block else: Block is
+    else()
+  end
+end
