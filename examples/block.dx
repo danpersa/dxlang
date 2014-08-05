@@ -1,0 +1,18 @@
+class Block
+  default: is
+    call
+  end
+
+  call: is
+    # call the content of the block
+  end
+end
+
+module BlockExample
+
+  main: args: List is
+    block = Block new
+    block() # calls the default method
+    block.call # calls the call method
+  end
+end

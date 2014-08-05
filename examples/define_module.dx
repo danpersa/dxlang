@@ -2,7 +2,7 @@ module Standard
 
   if: condition: Boolean then: Block else: Block is
     condition is_true: then.call
-              else: else()
+              else: else.call
   end
 
   loop_through: [H | T] is
