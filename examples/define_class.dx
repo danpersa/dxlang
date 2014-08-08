@@ -17,13 +17,13 @@ immutable class Point1 x: Integer y: Integer
 
 class Rectangle
   final with_getter Point upper_left_corner
-  final_with_getter Point down_right_corner
+  final with_getter Point down_right_corner
 
   default: a: Point b: Point is
     return Rectangle new a b
   end
 
-private 
+private
 
   initialize: a: Point b: Point is
     upper_left_corner = a
